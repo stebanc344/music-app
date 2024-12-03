@@ -1,0 +1,21 @@
+<body>
+    <!-- update the header -->
+    <h1>Edit <%= instrument.name %></h1>
+
+    <form action="/instruments/<%=instrument._id%>?_method=PUT" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="<%= instrument.name %>" />
+  
+      <label for="canIplaythis">Ready to Play?</label>
+      <input type="checkbox" name="canIplaythis" 
+      
+  
+
+      <input type="checkbox" name="canIplaythis" <% if (instrument.canIplaythis) { %>checked<% } %> >
+    <!-- update the button text -->
+      <button type="submit">Update Instrument</button>
+    </form>
+      <a href="/instruments">Back to Instruments</a>
+</body>
+
+//commit check
